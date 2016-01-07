@@ -13,15 +13,15 @@ var Product = new Schema({
 	  _id : String,
 	  title: {type:String, es_indexed:true},
 	  category: {type:String, es_indexed:true},
-	  costPrice: Number,
-	  sellPrice: Number,
+	  costPrice: {type:Number},
+	  sellPrice: {type:Number},
 	  brand: {id: String, name: {type:String, es_indexed:true}, img: String},
 	  images:[Images],
 	  shipping: {weight:String, dimensions:{height:String,length:String, width:String}},
 	  sku: [Sku],
 	  specs:[Specs],
 	  description: {type:String, es_indexed:true},
-	  lastUpdated: String,
+	  lastUpdated: {type:String},
 	  
 	}, {collection: "products"}
 
